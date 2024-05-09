@@ -1,12 +1,20 @@
 apply plugin: 'com.android.application'
 apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'org.sonarqube'
 
+sonarqube {
+    properties {
+        property "sonar.projectKey", "PaulaRecaj_ParkingPRecaj"
+        property "sonar.organization", "paularecaj"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
 android {
     compileSdk 34
     buildToolsVersion '34.0.0'
 
     defaultConfig {
-        applicationId "com.lksnext.parkingplantilla"
+        applicationId "com.lksnext.parkingprecaj"
         minSdkVersion 24
         targetSdkVersion 34
         versionCode 1
@@ -31,6 +39,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace "com.lksnext.parkingprecaj"
 }
 
 dependencies {
